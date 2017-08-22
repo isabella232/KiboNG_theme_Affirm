@@ -1,0 +1,6 @@
+<div class="mz-affirm-banner">
+    <div>
+        {{ labels.affirmWidgetMessage|safe }}
+        <div class="affirm-site-modal-link-wrapper"></div>
+    </div>
+</div>

@@ -1,0 +1,110 @@
+{
+  "defaultMFP": "DEFAULT_MFP",
+  "siteLevelMFP": [
+    {
+      "enabled": false,
+      "mfpValue": "Site_Level_MFP",
+      "startDate": "2017-08-02T17:52:52.532Z",
+      "endDate": "2017-08-15T17:52:52.532Z",
+      "promoId": "SITE_LEVEL_PROMO_ID"
+    },
+    {
+      "enabled": false,
+      "mfpValue": "",
+      "startDate": "2017-08-02T17:52:52.532Z",
+      "endDate": "2017-08-02T17:52:52.532Z",
+      "promoId": ""
+    }
+  ],
+  "cartSizeMFP": {
+    "enabled": true,
+    "mfpValue": "CART_SIZE_FINANCING_PROGRAM",
+    "minOrderTotal": 101,
+    "maxOrderTotal": 395,
+    "promoId": "CART_SIZE_PROMO_ID"
+  },
+  "productLevelMFP": [
+    {
+      "enabled": false,
+      "skus": [ "10001", "2004" ],
+      "mfpValue": "FINANCING_NIKE_EXCLUSIVE",
+      "mfpInclusiveType": false,
+      "promoId": "NIKE_EXCLUSIV_PROMO_ID",
+      "priority": false,
+      "startDate": "2017-08-01T17:52:52.533Z",
+      "endDate": "2017-08-15T17:52:52.533Z"
+    },
+    {
+      "enabled": false,
+      "skus": [ "2004" ],
+      "mfpValue": "FINANCING_NIKE_INCLUSIVE",
+      "mfpInclusiveType": false,
+      "promoId": "NIKE_INCLUSIVE_PPROMO_ID",
+      "priority": 1,
+      "startDate": "2017-08-01T17:52:52.533Z",
+      "endDate": "2017-08-15T17:52:52.533Z"
+    },
+    {
+      "enabled": false,
+      "skus": [ "2004" ],
+      "mfpValue": "FINANCING_NIKE_EXCLUSIVE_FALSE",
+      "mfpInclusiveType": false,
+      "promoId": "NIKE_EXCLUSIVE_PROMO_ID",
+      "priority": false,
+      "startDate": "2017-08-01T17:52:52.533Z",
+      "endDate": "2017-08-07T17:52:52.533Z"
+    },
+    {
+      "enabled": false,
+      "skus": [],
+      "mfpValue": "",
+      "mfpInclusiveType": false,
+      "promoId": "",
+      "priority": 0,
+      "startDate": "",
+      "endDate": ""
+    }
+  ],
+  "categoryLevelMFP": [
+    {
+        "enabled": false,
+        "categoryCodes": [ "2", "1"],
+        "mfpValue": "FINANCING_CAT_1",
+        "mfpInclusiveType": true,
+        "promoId": "PROMO_CAT_1",
+        "priority": 2,
+        "startDate": "2017-08-01T17:52:52.533Z",
+        "endDate": "2017-08-15T17:52:52.533Z"
+    },
+    {
+        "enabled": false,
+        "categoryCodes": [ "2", "8"],
+        "mfpValue": "FINANCING_CAT_2",
+        "mfpInclusiveType": true,
+        "promoId": "PROMO_CAT_2",
+        "priority": false,
+        "startDate": "2017-08-01T17:52:52.533Z",
+        "endDate": "2017-08-15T17:52:52.533Z"
+    },
+    {
+        "enabled": false,
+        "categoryCodes": [ "2", "3"],
+        "mfpValue": "FINANCING_CAT_3",
+        "mfpInclusiveType": true,
+        "promoId": "PROMO_CAT_3",
+        "priority": 1,
+        "startDate": "2017-08-01T17:52:52.533Z",
+        "endDate": "2017-08-15T17:52:52.533Z"
+    },
+    {
+      "enabled": false,
+      "categoryCodes": [],
+      "mfpValue": "",
+      "mfpInclusiveType": false,
+      "promoId": "",
+      "priority": 0,
+      "startDate": "2017-08-02T17:52:52.534Z",
+      "endDate": "2017-08-15T17:52:52.534Z"
+    }
+  ]
+}

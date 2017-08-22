@@ -1,0 +1,8 @@
+{%if SiteContext.IsEditMode %}
+    <img width="111" height="34" src="https://cdn-assets.affirm.com/images/blue_logo-transparent_bg.png" alt="Affirm Banner"/>
+{% else %}
+    {% require_script "widgets/affirm-banner" %}
+    <span class="affirm-banner-container">
+        {% include model.config.template|default:"modules/common/affirm-banner" %}
+    </span>
+{% endif %}

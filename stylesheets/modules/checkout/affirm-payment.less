@@ -1,0 +1,95 @@
+﻿.mz-checkout-payment {
+    &.affirmpay-selected{
+    margin: 0 0 25px;
+}
+}
+
+.mz-paymentselector.mz-l-formfieldgroup {
+
+    .mz-paymentselector-paywithaffirm {
+        width: 100%;
+        margin-bottom: 25px;
+        margin-top: 5px;
+
+        &.disabled{
+            opacity: 0.5;
+            padding-left: 15px;
+        }
+        &.selected{
+            margin-top: 5px;
+        }
+
+        div.mz-l-formfieldgroup-cell:first-child {
+            min-width: 155px;
+
+            label.mz-paymentselector-label-paywithaffirm  {
+                display: inline-flex !important;
+            }
+
+            .affirm-checkout-message-selected{
+                color: #6f6f6f;
+                font-size: 12px;
+            }
+        }
+
+        .mz-l-formfieldgroup-affirm{
+            display: inline;
+            padding-right: 12.5px;
+            padding-bottom: 12.5px;
+        }
+    }
+}
+
+.payment-affirm-wrapper{
+    p{
+        display: inline;
+        text-transform: none;
+        letter-spacing: 1px;
+    }
+
+    .affirm-site-modal{
+        &.local{
+            cursor: pointer;
+            padding-left: 5px;
+            padding-top: 1px;
+            text-transform: none;
+        }
+    }
+    .affirm-logo-local{
+        font-family: affirm!important;
+        speak: none;
+        font-style: normal;
+        font-weight: 400;
+        font-variant: normal;
+        text-transform: none;
+        line-height: 1;
+        letter-spacing: 0;
+        -ms-font-feature-settings: "liga" 1;
+        -webkit-font-feature-settings: "liga";
+        font-feature-settings: "liga";
+        -webkit-font-variant-ligatures: discretionary-ligatures;
+        font-variant-ligatures: discretionary-ligatures;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        font-size: .8em;
+
+        &.color{
+            color: #00c8e5;
+        }
+        &.f-12{
+            font-size: 12px
+        }
+        &.f-14{
+            font-size: 14px
+        }
+        &.f-16{
+            font-size: 16px
+        }
+    }
+
+    &.review{
+        .p{
+            font-size: 14px;
+        }
+    }
+}

@@ -1,0 +1,13 @@
+{% with productView.getAffirmMFP() as getAffirmMFP %}
+    {% with productView.getAffirmPromoId() as affirmPromoId %}
+        {% if model.onSale %}
+            <p class="affirm-as-low-as" data-amount="{{ model.salePrice|multiply(100) }}" data-promo-id="{{ affirmPromoId }}"></p>
+        {% else %}
+            {% if not model.price && priceRange.upper && priceRange.upper.price %}
+                <p class="affirm-as-low-as" data-amount="{{ priceRange.upper.price|multiply(100) }}" data-promo-id="{{ affirmPromoId }}"></p>
+            {% else%}
+                <p class="affirm-as-low-as" data-amount="{{ model.price|multiply(100) }}" data-promo-id="{{ affirmPromoId }}"></p>
+            {% endif %}
+        {% endif %}
+    {% endwith %}
+{% endwith %}
