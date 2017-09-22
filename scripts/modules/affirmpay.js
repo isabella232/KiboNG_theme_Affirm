@@ -11,10 +11,10 @@ define(['modules/jquery-mozu',
         isScriptLoaded: false,
         defaultPromoId: '',
         promoId: '',
-        threshold: false,
+        threshold: 0,
         financingProgram: false, // old admin props, background compatibility
         isSandbox: true,
-        checkoutItemsQty: 100, // max qty of items present in the order
+        checkoutItemsQty: 10000, // max qty of items present in the order
         currencyCodeEnable: 'USD',
         messageCartDisabled: "Monthly Payments with <span class='affirm-logo-local color f-12'>Affirm</span> on carts with only one item ${0}+",
         messageCheckoutSelected: "Continuing will take you to the Review Order page. You will then be redirected to Affirm to securely complete your purchase.",
@@ -34,7 +34,7 @@ define(['modules/jquery-mozu',
             this.isEnabled = ( paymentSettings.isEnabled && this.isCustomEnabled( paymentSettings ) );
             this.promoId = this.getValue(paymentSettings, "promoId");
             this.defaultPromoId = this.promoId;
-            this.threshold = this.getValue(paymentSettings, "threshold");
+            this.threshold = this.getValue(paymentSettings, "threshold") || this.threshold;
             this.financingProgram = this.getValue(paymentSettings, "financingProgram");
             var environment = this.getValue(paymentSettings, "environment");
             this.isSandbox = environment == "sandbox";

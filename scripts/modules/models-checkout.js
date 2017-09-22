@@ -1766,7 +1766,7 @@ isNonMozuCheckout: function() {
                     'public_api_key': affirmProps.publicApiKey,
                     'user_confirmation_url' : urlParts[0] + "//" + urlParts[2] + '/affirm/processor?id=' + orderInfo.get('id'),
                     'user_cancel_url' : urlParts[0] + "//" + urlParts[2] + '/affirm/processor?affcancel=1&id=' + orderInfo.get('id'),
-                    'user_confirmation_url_action':'GET'
+                    'user_confirmation_url_action':'POST'
                 };
                 var billingData  = {
                     'name': {
