@@ -31,7 +31,7 @@ When you run the Mozu Theme Generator, the tools create a git remote to the Mozu
    - **Note:** If you are installing the theme to a non-production Mozu environment, use: <br/> `yo mozu-theme --internal`
 <br/>The tool will prompt you to select your environment.
 2.  Select **Existing theme from repository**.
-3.  Enter the URL for this repository:<br/> `https://github.com/DepLabs/Kibo-Affirm-Payments-Theme`<br/> and hit **Enter**.
+3.  Enter the URL for this repository:<br/> `https://github.com/Affirm/KiboNG_theme_Affirm.git`<br/> and hit **Enter**.
 4.  Follow the prompts to enter your Dev Center Application Key and login information. The generator runs and creates or merges all the Kibo-Affirm-Payments-Theme files in your theme directory.
 5.  Run `grunt` in your theme directory to upload the theme files to Mozu Dev Center.
 6.  View the theme in Dev Center to see your uploaded files and Install the theme to a sandbox. Apply the theme to see the Affirm Promotional Messages into Product and Cart and also the Pay with Affirm option into your Checkout pages. <br/>
