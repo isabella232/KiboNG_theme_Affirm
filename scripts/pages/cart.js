@@ -188,14 +188,9 @@ define( [
         if( AffirmPay.isEnabled ){
             var affirmMFP =  AffirmPay.getCartPageMFP( cartTotal, cartItems );
             if( cartTotal >= AffirmPay.threshold && itemsQtyTotal > 0 && itemsQtyTotal <= AffirmPay.checkoutItemsQty ){
-                var toAffirmNumberFormat = function( num ){
-                    num = ( num * 100 ).toString();
-                    return ( num.indexOf('.') >= 0 && num.substr(num.indexOf('.') + 1).length > 2 ) ? Math.ceil( num ) : num;
-                };
-
                 $('div.shopping-cart-review-affirm-wrapper p').append($('<p />', {
                     'class': 'affirm-as-low-as',
-                    'data-amount': toAffirmNumberFormat( cartTotal ),
+                    'data-amount': AffirmPay.toAffirmNumberFormat( cartTotal ),
                     'data-promo-id': affirmMFP.promoId || AffirmPay.promoId
                 }));
             }

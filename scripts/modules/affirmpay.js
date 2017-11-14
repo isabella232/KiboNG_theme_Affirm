@@ -170,6 +170,18 @@ define(['modules/jquery-mozu',
                 return c.split("{" + e + "}").join(d[e] || "");
             }
         },
+        toAffirmNumberFormat: function( num ){
+            // format: xx => xx00, xx.9 => xx90, xx.94 => xx94 without rouning
+            var pad = '00';
+            num = num.toString();
+            //add . if the number is an integer
+            num = ( num.indexOf('.') >= 0 ) ? num : num + '.';
+            var decimals = num.split('.')[1].substring(0,2);
+            // complete decimals to fit 2 zeros ('' => '00', '1' => '10', '95' => '95')
+            decimals = decimals + pad.substring(0, pad.length - decimals.length);
+            //num = num.match(/^-?\d+(?:\.\d{0,2})?/)[0];
+            return num.split('.')[0] + decimals;
+        },
         getProductMFP: function( itemSku, isUniqueItemInCart ){
             var returnMFP = false;
             if( this.mfpConfig && this.mfpConfig.productLevelMFP ){

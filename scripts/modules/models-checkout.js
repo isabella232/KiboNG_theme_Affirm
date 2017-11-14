@@ -1747,10 +1747,6 @@ isNonMozuCheckout: function() {
                 var billingInfo = orderInfo.get('billingInfo');
                 var billingContact = billingInfo.get('billingContact');
                 var urlParts = window.location.href.split("/");
-                var toAffirmNumberFormat = function( num ){
-                    num = ( num * 100 ).toString();
-                    return ( num.indexOf('.') >= 0 && num.substr(num.indexOf('.') + 1).length > 2 ) ? Math.ceil( num ) : num;
-                };
 
                 // TODO: get metaData info from ...
                 var metaData = {
@@ -1830,7 +1826,7 @@ isNonMozuCheckout: function() {
                     itemsData.push({
                         'display_name': item.product.name,
                         'sku': item.product.productCode,
-                        'unit_price': ( item.product.price.salePrice ) ? toAffirmNumberFormat( item.product.price.salePrice ) : toAffirmNumberFormat( item.product.price.price ),
+                        'unit_price': ( item.product.price.salePrice ) ? AffirmPay.toAffirmNumberFormat( item.product.price.salePrice ) : AffirmPay.toAffirmNumberFormat( item.product.price.price ),
                         'qty':item.quantity,
                         'item_image_url': item.product.imageUrl,
                         'item_url':item.product.imageUrl
@@ -1846,9 +1842,9 @@ isNonMozuCheckout: function() {
                     'shipping': shippingData,
                     'items': itemsData,
                     'currency': orderInfo.get('currencyCode'),
-                    'tax_amount': toAffirmNumberFormat( orderInfo.get('taxTotal') ),
-                    'shipping_amount': toAffirmNumberFormat( orderInfo.get('shippingTotal') ),
-                    'total': toAffirmNumberFormat( orderInfo.get('total') )
+                    'tax_amount': AffirmPay.toAffirmNumberFormat( orderInfo.get('taxTotal') ),
+                    'shipping_amount': AffirmPay.toAffirmNumberFormat( orderInfo.get('shippingTotal') ),
+                    'total': AffirmPay.toAffirmNumberFormat( orderInfo.get('total') )
                 };
 
             },

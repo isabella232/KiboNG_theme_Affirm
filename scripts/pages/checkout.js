@@ -422,11 +422,7 @@ require(["modules/jquery-mozu", "underscore", "hyprlive", "modules/backbone-mozu
                 ( this.model.getOrder().get( 'total' ) >= AffirmPay.threshold ) );
         },
         getAffirmAmount: function (){
-            var toAffirmNumberFormat = function( num ){
-                num = ( num * 100 ).toString();
-                return ( num.indexOf('.') >= 0 && num.substr(num.indexOf('.') + 1).length > 2 ) ? Math.ceil( num ) : num;
-            };
-            return toAffirmNumberFormat( this.model.parent.get('total') );
+            return AffirmPay.toAffirmNumberFormat( this.model.parent.get('total') );
         },
         getAffirmPromoId: function(){
             return AffirmPay.promoId || '';
