@@ -1,10 +1,10 @@
 {
   "name": "paywithaffirmtheme",
   "author": {
-    "name": "Eduardo",
-    "email": "edudelisa@gmail.com"
+    "name": "Affirm",
+    "email": "channel-partner@affirm.com"
   },
-  "description": "Enable Affirm Payments ad promotional messages",
+  "description": "Enable Affirm promotional messages",
   "version": "2.0.0",
   "scripts": {
     "clean": "rm -rf compiled",
@@ -44,6 +44,5 @@
       "js/tooltip.js",
       "js/scrollspy.js"
     ]
-  },
-  "license": "UNLICENSED"
+  }
 }
